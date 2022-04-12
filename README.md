@@ -16,7 +16,7 @@
 
 ## 🗣️ About
 
-> _The objective of this project is to communicate using signals between 2 programs the Server and the Client. ._
+> _The objective of this project is to communicate using signals between 2 programs the Server and the Client._
 
 For detailed information, refer to the [**subject of this project**](https://github.com/Diogo13Antunes/42Cursus_Mini_Talk/blob/main/subject.pdf).
 
