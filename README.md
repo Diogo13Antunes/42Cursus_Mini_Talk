@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Diogo13Antunes/42Cursus_Mini_Talk?color=blueviolet" />
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Diogo13Antunes/42Cursus_MINI_TALK?color=blueviolet" />
 	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/Diogo13Antunes/42Cursus_Mini_Talk?color=blueviolet" />
 	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Diogo13Antunes/42Cursus_Mini_Talk?color=blue" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Diogo13Antunes/42Cursus_Mini_Talk?color=blue" />
