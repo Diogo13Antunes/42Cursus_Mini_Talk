@@ -95,7 +95,7 @@ int	main(void)
 	sigaddset(&block_sig, SIGUSR2);
 	act.sa_mask = block_sig;
 	act.sa_flags = SA_SIGINFO;
-	act.__sigaction_u.__sa_sigaction = &print_char;
+	act.sa_sigaction = &print_char;
 	sigaction(SIGUSR1, &act, NULL);
 	sigaction(SIGUSR2, &act, NULL);
 	while (1)

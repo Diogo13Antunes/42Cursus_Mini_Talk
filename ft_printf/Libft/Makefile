@@ -16,6 +16,8 @@ SRC  = 	ft_strlen.c				\
 		ft_tolower.c			\
 		ft_itoa_base.c			\
 
+$(VERBOSE).SILENT:
+
 CC =gcc
 RM =rm -f
 CFLAGS = -Wall -Werror -Wextra -I.

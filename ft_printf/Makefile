@@ -12,6 +12,8 @@
 
 CC = gcc
 
+$(VERBOSE).SILENT:
+
 CFLAGS = -Wall -Werror -Wextra -g
 
 NAME = libftprintf.a

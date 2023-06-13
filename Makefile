@@ -45,30 +45,24 @@ SRC = $(addprefix $(SRC_PATH)/, $(SRC_NAME))
 all: $(NAME)
 
 $(LIBFT): $(shell make -C $(LIBFT_PATH) -q libft.a || echo force)
-	make -C $(LIBFT_PATH)
+	@make -C $(LIBFT_PATH)
 
 $(FT_PRINTF): $(shell make -C $(FT_PRINTF_PATH) -q libftprintf.a || echo force)
-	make -C $(FT_PRINTF_PATH)
+	@make -C $(FT_PRINTF_PATH)
 
 $(SERVER) : objects/server.o objects/utils.o includes/mini_talk.h
 	$(CC) $(CFLAGS) objects/server.o objects/utils.o $(INC) $(LIBFT) $(FT_PRINTF) -o $(SERVER)
-	echo "\x1b[36m[SERVER COMPILED]\x1b[0m"
+	@echo "\033[1;36m[SERVER COMPILED]\033[0m"
 
 $(CLIENT) : objects/client.o objects/utils.o includes/mini_talk.h
 	$(CC) $(CFLAGS) objects/client.o objects/utils.o $(INC) $(LIBFT) $(FT_PRINTF) -o $(CLIENT)
-	echo "\x1b[36m[CLIENT COMPILED]\x1b[0m"
+	@echo "\033[1;36m[CLIENT COMPILED]\033[0m"
 
 $(NAME) : $(LIBFT) $(FT_PRINTF) $(CLIENT) $(SERVER)
-	make norminette
-	echo "\x1b[36m[MINI_TALK COMPILED]\x1b[0m"
 
 $(OBJ_PATH)/%.o : $(SRC_PATH)/%.c
 	mkdir -p objects
 	$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
-
-norminette:
-	echo "\033[1;32m[NORMINETTE]\x1b[0m"
-	norminette | egrep -B1 'Error|Warning' | sed ''/Error/s//$(printf "\033[31m\033[4mError\033[0m")/'' | sed ''/Warning/s//$(printf "\033[33m\033[4mWarning\033[0m")/''
 
 clean:
 	make clean -C $(LIBFT_PATH)

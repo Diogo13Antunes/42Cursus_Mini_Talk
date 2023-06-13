@@ -10,6 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+$(VERBOSE).SILENT:
+
 NAME = libft.a
 SRC = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr\
 ft_memcmp ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr\

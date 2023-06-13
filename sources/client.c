@@ -68,7 +68,7 @@ int	main(int argc, char **argv)
 	sigemptyset(&block_sig);
 	sigaddset(&block_sig, SIGUSR1);
 	actusr_c.sa_mask = block_sig;
-	actusr_c.__sigaction_u.__sa_handler = &message_received;
+	actusr_c.sa_handler = &message_received;
 	if (sigaction(SIGUSR1, &actusr_c, NULL) == -1)
 	{
 		ft_putendl_fd("Error in sigaction", 2);
