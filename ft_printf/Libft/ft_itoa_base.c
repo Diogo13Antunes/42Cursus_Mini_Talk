@@ -18,8 +18,6 @@ int	ft_nbr_len(unsigned long nb, int base)
 	int	i;
 
 	i = 0;
-	if (nb < 0)
-		nb *= -1;
 	while (nb > 0)
 	{
 		nb /= base;
@@ -52,13 +50,11 @@ char	*ft_strdup(char *str)
 
 char	*ft_itoa_base(unsigned long value, int base)
 {
-	int		i;
 	int		s;
 	int		len;
 	char	*radix;
 	char	*result;
 
-	i = 0;
 	s = 0;
 	len = 0;
 	radix = "0123456789ABCDEF";
